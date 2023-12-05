@@ -1,0 +1,104 @@
+{
+  "posts": [
+    {
+      "id": 2,
+      "description": "mellim",
+      "name": "EMIN"
+    },
+    {
+      "id": 3,
+      "description": "telebe",
+      "name": "memedtagi"
+    },
+    {
+      "id": 4,
+      "description": "telebe",
+      "name": "ilkin"
+    },
+    {
+      "id": 5,
+      "description": "telebe",
+      "name": "rahim"
+    },
+    {
+      "id": 6,
+      "description": "telebe",
+      "name": "ehmed"
+    },
+    {
+      "id": 7,
+      "description": "telebe",
+      "name": "alpay"
+    },
+    {
+      "id": 8,
+      "description": "telebe",
+      "name": "emrah"
+    },
+    {
+      "id": 9,
+      "description": "telebe",
+      "name": "mehriban"
+    },
+    {
+      "id": 10,
+      "description": "telebe",
+      "name": "nurana"
+    },
+    {
+      "id": 11,
+      "description": "telebe",
+      "name": "asli"
+    },
+    {
+      "id": 12,
+      "description": "telebe",
+      "name": "nazila"
+    },
+    {
+      "id": 13,
+      "description": "telebe",
+      "name": "ali"
+    },
+    {
+      "id": 14,
+      "description": "telebe",
+      "name": "amirxan"
+    },
+    {
+      "id": 15,
+      "description": "telebe",
+      "name": "kenan"
+    },
+    {
+      "id": 16,
+      "description": "telebe",
+      "name": "osmanov"
+    },
+    {
+      "id": 17,
+      "description": "telebe",
+      "name": "ferid"
+    },
+    {
+      "id": 18,
+      "description": "telebe",
+      "name": "nihad"
+    },
+    {
+      "id": 19,
+      "description": "telebe",
+      "name": "akif"
+    },
+    {
+      "name": "toqrul",
+      "description": "telebe",
+      "id": 20
+    },
+    {
+      "name": "HASAN",
+      "description": "MELLIM",
+      "id": 21
+    }
+  ]
+}
