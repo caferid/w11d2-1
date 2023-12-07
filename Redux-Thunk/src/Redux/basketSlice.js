@@ -8,17 +8,30 @@ const initialState = {
 
 
 const basketSlice = createSlice({
-    name: "counter",
+    name: "basket",
     initialState,
     reducers: {
         addBasket: (state, action) => {
-            state.value.push(action.payload)
+            const find = state.value.find(x=>x.id===action.payload.id)
+            if (find) {
+                find.count++
+                return
+            }else{
+
+                state.value.push(action.payload)
+            }
         },
         deleteBasket: (state,action) => {
-                state.value=state.value.filter(basket=>basket.id!==action.payload)
+                state.value=state.value.filter(category=>category.id!==action.payload)
         },
         deleteAll: (state, action) => {
             state.value = state.value + action.payload
+        },
+        increment:(state,action)=>{
+            const find = state.value.find(x=>x.id===action.payload.id)
+            if (find) {
+                find.count++
+            }
         }
 
 
@@ -26,6 +39,6 @@ const basketSlice = createSlice({
 })
 
 
-export const { addBasket, deleteBasket} = basketSlice.actions
+export const { addBasket, deleteBasket,increment} = basketSlice.actions
 
 export default basketSlice.reducer

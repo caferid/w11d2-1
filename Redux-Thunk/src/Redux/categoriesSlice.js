@@ -6,7 +6,7 @@ export const FetchCategories=createAsyncThunk(
     async ()=>{
         const baseURl='http://localhost:3000/posts'
         const response=await fetch(baseURl)
-        
+         
         return response.json()
     }
 )

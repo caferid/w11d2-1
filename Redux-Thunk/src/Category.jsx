@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { AddCategory, DeleteCategory, FetchCategories, UpdateCategory } from './Redux/categoriesSlice'
-import { addBasket } from './Redux/basketSlice'
+import { addBasket, deleteBasket } from './Redux/basketSlice'
 
 const Category = () => {
     const categories=useSelector(state=>state.category.entity)
     const loading=useSelector(state=>state.category.loading)
     const dispatch=useDispatch()
     const [newCategory,setNewCategory]=useState({name:"",description:""})
-    const [basket,setSetbasket]=useState({name:"",description:""})
+    // const [basket]=useState({id:null,name:"",description:""})
     const [editCategory,setEditCategory]=useState({id:null,name:"",description:""})
 
 
@@ -23,9 +23,12 @@ const handleAddCategory=(e)=>{
     setNewCategory({name:"",description:""})
 }
 //basket
-const handleAddBasket=()=>{
-    dispatch(addBasket(basket))
-    setSetbasket({name:"",description:""})
+const handleAddBasket=(id,name,desc)=>{
+    dispatch(addBasket({id:id,name:name,description:desc,count:1}))
+}   
+
+const handleDeleteBasket=(id)=>{
+    dispatch(deleteBasket(id))
 }
 
 //////
@@ -49,7 +52,8 @@ const handleDelete=(id)=>{
          <div key={category.id}>{category.id}=={ category.name}-{category.description} 
          <button onClick={()=>handleUpdate(category.id,category.name,category.description)}>Edit</button>
          <button onClick={()=>handleDelete(category.id)}>Delete</button>
-         <button onClick={()=>handleAddBasket(category.id)}>AddBasket</button>
+         <button onClick={()=>handleAddBasket(category.id,category.name,category.description)}>AddBasket</button>
+         <button onClick={()=>handleDeleteBasket(category.id)}>DeleteBasket</button>
          </div>
         ))}
 

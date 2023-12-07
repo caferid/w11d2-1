@@ -1,25 +1,30 @@
-import React, { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { addBasket } from './Redux/basketSlice'
-import { v4 as uuidv4 } from 'uuid';
+import { deleteBasket, increment} from './Redux/basketSlice'
 
 function Basketim() {
-    const [input,setInput]=useState("")
     const bas=useSelector(state=>state.basket.value)
     const dispatch=useDispatch()
 
-    const handleAddBasket=()=>{
-        dispatch(addBasket({
-            id:uuidv4(),
-            name:"",
-        }))
+    const handleDeleteBasket=(id)=>{
+        dispatch(deleteBasket(id))
+        
     }
+    const artircount=(category)=>{
+        dispatch(increment(category))}
+    
     
   return (
-    <div>as
-        <p>{bas.map((basket)=>(
-                <li key={basket.id}>{basket.id}-{basket.text}</li>))}
+    <div>basket start
+        <p>{bas.map((category)=>(
+                <li key={category.id}>{category.name}-{category.description}
+                <button  onClick={()=>handleDeleteBasket(category.id)}>sil</button>
+                <hr />
+                <button onClick={()=>artircount(category)}>artir</button>
+                <p>{category.count}
                 </p>
+                </li>))}
+                </p>
+                <p>basket end</p>
     </div>
   )
 }

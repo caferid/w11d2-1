@@ -1,16 +1,6 @@
 {
   "posts": [
     {
-      "id": 2,
-      "description": "mellim",
-      "name": "EMIN"
-    },
-    {
-      "id": 3,
-      "description": "telebe",
-      "name": "memedtagi"
-    },
-    {
       "id": 4,
       "description": "telebe",
       "name": "ilkin"
@@ -74,11 +64,6 @@
       "id": 16,
       "description": "telebe",
       "name": "osmanov"
-    },
-    {
-      "id": 17,
-      "description": "telebe",
-      "name": "ferid"
     },
     {
       "id": 18,
