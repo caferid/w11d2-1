@@ -8,6 +8,7 @@ function Basketim() {
     const handleDeleteBasket=(id)=>{
         dispatch(deleteBasket(id))
         
+        
     }
     const artircount=(category)=>{
         dispatch(increment(category))}
